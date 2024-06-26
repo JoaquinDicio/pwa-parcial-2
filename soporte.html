@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./icons/favicon-256.png" type="image/x-icon" />
+
+    <title>Soporte</title>
+    <!-- tailwind -->
+    <script src="./js/tailwind.js"></script>
+    <!-- manifest -->
+    <link rel="manifest" href="./site.webmanifest" />
+    <!-- js -->
+    <script src="./db/db.js"></script>
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body class="bg-slate-200">
+    <header
+      class="min-h-[60px] fixed top-0 w-full flex flex-wrap items-center justify-between px-8 md:px-12 py-5 text-white bg-slate-900"
+    >
+      <h1 class="text-xl font-bold">EnviosFlex</h1>
+      <button
+        id="show-menu"
+        class="rounded bg-blue-500 text-white py-1 px-2 md:hidden"
+      >
+        Menu
+      </button>
+      <nav
+        id="nav-menu"
+        class="flex gap-10 hidden md:flex md:w-fit w-full items-center"
+      >
+        <ul class="flex flex-col md:flex-row gap-4 py-3 md:py-0 md:gap-3">
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/sobre-nosotros.html">Sobre nosotros</a></li>
+          <li><a href="/costos.html">Costos</a></li>
+          <li><a href="/programar-envio.html">Programar envio</a></li>
+          <li>
+            <a href="/mis-envios.html"
+              >Mis envios (<span id="qty-envios">0</span>)</a
+            >
+          </li>
+          <li><a href="/soporte.html">Ayuda</a></li>
+          <li>
+            <a
+              href="/programar-envio.html"
+              class="rounded-sm bg-blue-500 font-medium text-white p-2"
+              >Contratar</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="min-h-screen py-20">
+      <section class="px-5 md:px-32 py-10">
+        <h2 class="text-2xl text-slate-900 font-bold">FAQ</h2>
+        <ul class="mt-5" id="faq-list">
+          <!-- completado con js -->
+        </ul>
+        <div class="px-10 py-8 mt-5 bg-white rounded">
+          <h2 class="text-xl mb-4 font-medium text-slate-900">
+            Si necesitas hablar con soporte
+          </h2>
+          <p class="mb-5">
+            Si ya leiste las preguntas frecuentes y aun no encontras lo que
+            estas buscando, podes llamarnos.
+          </p>
+          <p>
+            <span class="text-blue-500 text-2xl font-bold w-full"
+              >11 1234 - 5678</span
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-slate-900 flex items-center justify-center text-white h-[60px]"
+    >
+      <p class="text-center">
+        Envios Flex 2024 - Todos los derechos reservados
+      </p>
+    </footer>
+
+    <script src="./js/soporte.js"></script>
+  </body>
+</html>

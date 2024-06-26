@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./icons/favicon-256.png" type="image/x-icon" />
+
+    <title>Programar envio</title>
+    <!-- tailwind -->
+    <script src="./js/tailwind.js"></script>
+    <!-- js -->
+    <script src="./db/db.js"></script>
+    <script defer src="./js/main.js"></script>
+    <!-- manifest -->
+    <link rel="manifest" href="./site.webmanifest" />
+  </head>
+  <body class="bg-slate-200">
+    <header
+      class="min-h-[60px] fixed top-0 w-full flex flex-wrap items-center justify-between px-8 md:px-12 py-5 text-white bg-slate-900"
+    >
+      <h1 class="text-xl font-bold">EnviosFlex</h1>
+      <button
+        id="show-menu"
+        class="rounded bg-blue-500 text-white py-1 px-2 md:hidden"
+      >
+        Menu
+      </button>
+      <nav
+        id="nav-menu"
+        class="flex gap-10 hidden md:flex md:w-fit w-full items-center"
+      >
+        <ul class="flex flex-col md:flex-row gap-4 py-3 md:py-0 md:gap-3">
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/sobre-nosotros.html">Sobre nosotros</a></li>
+          <li><a href="/costos.html">Costos</a></li>
+          <li><a href="/programar-envio.html">Programar envio</a></li>
+          <li>
+            <a href="/mis-envios.html"
+              >Mis envios (<span id="qty-envios">0</span>)</a
+            >
+          </li>
+          <li><a href="/soporte.html">Ayuda</a></li>
+          <li>
+            <a
+              href="/programar-envio.html"
+              class="rounded-sm bg-blue-500 font-medium text-white p-2"
+              >Contratar</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="min-h-screen py-20">
+      <section class="px-5 md:px-32 py-10" id="section_programar_envio">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900">Programa tu envio</h2>
+          <p>
+            Para poder programar tu envio es necesario que brindes los
+            siguientes datos
+          </p>
+          <div class="flex w-full items-center">
+            <form
+              action="#"
+              id="form-programar"
+              method="post"
+              class="bg-white flex flex-col gap-1 min-h-[450px] p-5 mt-5 w-full"
+            >
+              <label for="nombre" class="block mb-1">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                placeholder="Joaquin"
+                class="bg-slate-200 px-2 py-1 rounded w-full"
+              />
+              <label for="apellido" class="block mb-1">Apellido</label>
+              <input
+                type="text"
+                id="apellido"
+                placeholder="Di cio"
+                class="bg-slate-200 px-2 py-1 rounded"
+              />
+              <label for="direccion-1" class="block mb-1"
+                >Direccion recogida</label
+              >
+              <input
+                type="text"
+                id="direccion-1"
+                placeholder="Calle falsa 123"
+                class="bg-slate-200 px-2 py-1 rounded w-full"
+              />
+              <label for="direccion-2" class="block mb-1"
+                >Direccion de entrega</label
+              >
+              <input
+                type="text"
+                id="direccion-2"
+                placeholder="Calle falsa 123"
+                class="bg-slate-200 px-2 py-1 rounded w-full"
+              />
+
+              <label for="fecha" class="block mb-1">Fecha de recogida</label>
+              <input
+                type="date"
+                id="fecha"
+                class="bg-slate-200 px-2 py-1 rounded w-full"
+              />
+              <input
+                type="button"
+                value="Programar"
+                id="programar_envio"
+                class="bg-blue-500 font-medium text-white py-2 px-4 rounded mt-5"
+              />
+              <i id="error" class="text-sm hidden text-red-500"
+                >Complete todos los campos</i
+              >
+            </form>
+            <div>
+              <img
+                src="./img/envios.jpg"
+                alt="envio siendo recibido"
+                class="h-[450px] mt-5 object-cover hidden md:block"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-slate-900 flex items-center justify-center text-white h-[60px]"
+    >
+      <p class="text-center">
+        Envios Flex 2024 - Todos los derechos reservados
+      </p>
+    </footer>
+    <script src="./js/programarEnvio.js"></script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./icons/favicon-256.png" type="image/x-icon" />
+
+    <!-- tailwind -->
+    <script src="./js/tailwind.js"></script>
+    <!-- js -->
+    <script src="./db/db.js"></script>
+    <script defer src="./js/main.js"></script>
+    <title>Sobre nosotros</title>
+    <!-- manifest -->
+    <link rel="manifest" href="./site.webmanifest" />
+  </head>
+  <body>
+    <header
+      class="min-h-[60px] fixed top-0 w-full flex flex-wrap items-center justify-between px-8 md:px-12 py-5 text-white bg-slate-900"
+    >
+      <h1 class="text-xl font-bold">EnviosFlex</h1>
+      <button
+        id="show-menu"
+        class="rounded bg-blue-500 text-white py-1 px-2 md:hidden"
+      >
+        Menu
+      </button>
+      <nav
+        id="nav-menu"
+        class="flex gap-10 hidden md:flex md:w-fit w-full items-center"
+      >
+        <ul class="flex flex-col md:flex-row gap-4 py-3 md:py-0 md:gap-3">
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/sobre-nosotros.html">Sobre nosotros</a></li>
+          <li><a href="/costos.html">Costos</a></li>
+          <li><a href="/programar-envio.html">Programar envio</a></li>
+          <li>
+            <a href="/mis-envios.html"
+              >Mis envios (<span id="qty-envios">0</span>)</a
+            >
+          </li>
+          <li><a href="/soporte.html">Ayuda</a></li>
+          <li>
+            <a
+              href="/programar-envio.html"
+              class="rounded-sm bg-blue-500 font-medium text-white p-2"
+              >Contratar</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="pt-16 min-h-screen bg-slate-100">
+      <section
+        class="px-8 md:px-20 flex flex-col-reverse md:flex-row md:p-10 justify-center"
+      >
+        <div class="w-full lg:w-[50%] pb-20">
+          <p class="text-2xl text-slate-900 font-bold mt-4">
+            Conectando el mundo:
+          </p>
+          <p class="text-2xl text-slate-900 font-bold mb-2">
+            Nuestra historia en la logistica
+          </p>
+          <p class="text-blue-500">
+            Impulsando el Movimiento Eficiente, Confiable y Sostenible
+          </p>
+          <p class="pt-5 text-slate-700 md:pr-20">
+            Desde nuestros modestos inicios como un pequeño equipo con una
+            visión audaz, hemos crecido hasta convertirnos en un pilar
+            indispensable en el mundo de la logística global.
+          </p>
+          <p class="mt-2 text-slate-700 md:pr-20">
+            En cada paso de nuestro viaje, nos hemos comprometido con un solo
+            propósito: facilitar el movimiento de bienes de manera eficiente,
+            confiable y sostenible.
+          </p>
+          <div class="flex flex-col md:block">
+            <p class="py-5 text-blue-500">¿Listo para enviar tu paquete?</p>
+            <a
+              href="/programar-envio.html"
+              class="rounded-sm bg-blue-500 text-white font-medium p-3"
+            >
+              Contratar
+            </a>
+          </div>
+        </div>
+        <div class="w-full md:w-[50%]">
+          <img
+            class="object-cover rounded-md"
+            src="./img/sobre-nosotros.jpg"
+            alt="foto del equipo trabajando"
+          />
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-slate-900 flex items-center justify-center text-white h-[60px]"
+    >
+      <p class="text-center">
+        Envios Flex 2024 - Todos los derechos reservados
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./icons/favicon-256.png" type="image/x-icon" />
+    <title>Envios Flex</title>
+    <!-- tailwind -->
+    <script src="./js/tailwind.js"></script>
+    <!-- manifest -->
+    <link rel="manifest" href="./site.webmanifest" />
+    <!-- js -->
+    <script src="./db/db.js"></script>
+    <script defer src="./js/main.js"></script>
+  </head>
+
+  <body class="bg-slate-200">
+    <header
+      class="min-h-[60px] fixed top-0 w-full flex flex-wrap items-center justify-between px-8 md:px-12 py-5 text-white bg-slate-900"
+    >
+      <h1 class="text-xl font-bold">EnviosFlex</h1>
+      <button
+        id="show-menu"
+        class="rounded bg-blue-500 text-white py-1 px-2 md:hidden"
+      >
+        Menu
+      </button>
+      <nav
+        id="nav-menu"
+        class="flex gap-10 hidden md:flex md:w-fit w-full items-center"
+      >
+        <ul class="flex flex-col md:flex-row gap-4 py-3 md:py-0 md:gap-3">
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/sobre-nosotros.html">Sobre nosotros</a></li>
+          <li><a href="/costos.html">Costos</a></li>
+          <li><a href="/programar-envio.html">Programar envio</a></li>
+          <li>
+            <a href="/mis-envios.html"
+              >Mis envios (<span id="qty-envios">0</span>)</a
+            >
+          </li>
+          <li><a href="/soporte.html">Ayuda</a></li>
+          <li>
+            <a
+              href="/programar-envio.html"
+              class="rounded-sm bg-blue-500 font-medium text-white p-2"
+              >Contratar</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <div
+          class="flex flex-col-reverse md:flex-row items-center flex-wrap px-8 md:px-20 min-h-screen"
+        >
+          <div class="md:w-[50%] flex flex-col gap-3 pb-10 w-full">
+            <h2 class="max-w-[350px] text-3xl font-bold text-slate-900">
+              Envios seguros, rapidos y economicos.
+            </h2>
+            <p class="max-w-[380px] text-slate-700 mt-2">
+              Realizamos envios de todo tipo de paquetes y a cualquier parte de
+              CABA
+            </p>
+            <div class="flex sm:gap-3 gap-1 flex-wrap">
+              <a
+                href="./programar-envio.html"
+                class="font-medium rounded-sm text-white py-2.5 px-8 mt-2 bg-blue-500"
+              >
+                Contratar
+              </a>
+              <a
+                href="./sobre-nosotros.html"
+                class="rounded-sm py-2.5 px-8 mt-2 border-blue-500 border-2 font-medium text-blue-500"
+              >
+                Mas informacion
+              </a>
+            </div>
+          </div>
+          <div class="md:w-[50%] w-full">
+            <img
+              class="rounded-[20px] mb-7"
+              src="./img/home-banner.jpg"
+              alt="camion de reparto de la empresa"
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        class="min-h-[50vh] flex flex-col items-center justify-center px-8 md:px-20 bg-slate-200"
+      >
+        <div class="flex gap-3 flex-wrap justify-center pb-20">
+          <a
+            href="./programar-envio.html"
+            class="bg-[url('/img/envios.jpg')] bg-cover cursor-pointer hover:scale-[1.05] w-full sm:w-[250px] transition-[.5s] rounded-md h-[200px]"
+          >
+            <div
+              class="bg-black/70 h-full text-white text-center flex flex-col justify-center w-full p-8 rounded-md"
+            >
+              <h3 class="font-medium text-center">Programar envio</h3>
+              <p class="text-sm">Realiza la solicitud de tu envio</p>
+            </div>
+          </a>
+          <a
+            href="/costos.html"
+            class="bg-[url('/img/costo.jpeg')] bg-cover cursor-pointer hover:scale-[1.05] w-full sm:w-[250px] transition-[.5s] rounded-md h-[200px]"
+          >
+            <div
+              class="bg-black/70 h-full text-white text-center flex flex-col justify-center w-full p-8 rounded-md"
+            >
+              <h3 class="font-medium text-center">Calcular costos</h3>
+              <p class="text-sm">Consulta el precio de tu envio</p>
+            </div>
+          </a>
+          <a
+            download
+            href="img/mapa.jpg"
+            class="bg-[url('/img/mapa.jpg')] bg-cover cursor-pointer hover:scale-[1.05] w-full sm:w-[250px] transition-[.5s] rounded-md h-[200px]"
+          >
+            <div
+              class="bg-black/70 h-full text-white text-center flex flex-col justify-center w-full p-8 rounded-md"
+            >
+              <h3 class="font-medium text-center">Mapa de cobvertura</h3>
+              <p class="text-sm">Descubri en que zonas operamos</p>
+            </div>
+          </a>
+          <a
+            href="./soporte.html"
+            class="bg-[url('/img/soporte.jpg')] bg-cover cursor-pointer hover:scale-[1.05] w-full sm:w-[250px] transition-[.5s] rounded-md h-[200px]"
+          >
+            <div
+              class="bg-black/70 h-full text-white text-center flex flex-col justify-center w-full p-8 rounded-md"
+            >
+              <h3 class="font-medium text-center">Soporte</h3>
+              <p class="text-sm">Si necesitas ayuda con tu envio</p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-slate-900 flex items-center justify-center text-white h-[60px]"
+    >
+      <p class="text-center">
+        Envios Flex 2024 - Todos los derechos reservados
+      </p>
+    </footer>
+  </body>
+</html>

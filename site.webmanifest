@@ -1,0 +1,35 @@
+{
+  "name": "EnviosFlex",
+  "lang": "es",
+  "description": "Realizamos envios a todo Buenos Aires, programa el tuyo ahora.",
+  "short_name": "EnviosFlex",
+  "icons": [
+    {
+      "src": "/icons/favicon-256.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "img/captures/captura_wide.jpeg",
+      "sizes": "1600x900",
+      "type": "image/png",
+      "platform": "web",
+      "form_factor": "wide"
+    },
+    {
+      "src": "img/captures/captura_mobile.jpeg",
+      "sizes": "725x952",
+      "type": "image/png",
+      "platform": "web",
+      "form_factor": "narrow"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3367D6",
+  "orientation": "any",
+  "scope": "/"
+}

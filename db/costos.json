@@ -1,0 +1,6 @@
+{
+  "tarifa_base": 1000,
+  "valor_kilometro": 250,
+  "recargo_por_lluvia": 50,
+  "recargo_paquete_grande": 25
+}

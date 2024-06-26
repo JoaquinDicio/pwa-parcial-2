@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./icons/favicon-256.png" type="image/x-icon" />
+
+    <title>Costos de envio</title>
+    <!-- tailwind -->
+    <script src="./js/tailwind.js"></script>
+    <!-- manifest -->
+    <link rel="manifest" href="./site.webmanifest" />
+    <!-- js -->
+    <script src="./db/db.js"></script>
+    <script defer src="./js/main.js"></script>
+    <script src="./utils/checkLluvia.js"></script>
+  </head/>
+  <body class="bg-slate-200">
+    <header
+    class="min-h-[60px] fixed top-0 w-full flex flex-wrap items-center justify-between px-8 md:px-12 py-5 text-white bg-slate-900"
+  >
+    <h1 class="text-xl font-bold">EnviosFlex</h1>
+    <button
+      id="show-menu"
+      class="rounded bg-blue-500 text-white py-1 px-2 md:hidden"
+    >
+      Menu
+    </button>
+    <nav
+      id="nav-menu"
+      class="flex gap-10 hidden md:flex md:w-fit w-full items-center"
+    >
+      <ul class="flex flex-col md:flex-row gap-4 py-3 md:py-0 md:gap-3">
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/sobre-nosotros.html">Sobre nosotros</a></li>
+        <li><a href="/costos.html">Costos</a></li>
+        <li><a href="/programar-envio.html">Programar envio</a></li>
+        <li>
+          <a href="/mis-envios.html"
+            >Mis envios (<span id="qty-envios">0</span>)</a
+          >
+        </li>
+        <li><a href="/soporte.html">Ayuda</a></li>
+        <li>
+          <a
+            href="/programar-envio.html"
+            class="rounded-sm bg-blue-500 font-medium text-white p-2"
+            >Contratar</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </header>
+    <main class="min-h-screen pt-20">
+      <section
+        id="costos"
+        class="flex flex-col justify-center items-center py-4 md:py-10 px-5 md:px-20"
+      >
+        <div class="max-w-[600px]">
+          <h2 class="text-center text-slate-900 pb-2 text-2xl font-bold">
+            Composicion de la tarifa
+          </h2>
+          <p class="text-center">
+            En esta seccion podras ver todo lo necesario para calcular el costo
+            de tu envio. Sin letras chicas y 100% transparente.
+          </p>
+        </div>
+        <div
+          class="pt-8 pb-10 mt-5 rounded bg-white mt-4 flex justify-center flex-col items-center px-10"
+        >
+          <h2 class="text-xl font-medium mb-5 text-slate-900">
+            Calculadora de costos
+          </h2>
+          <form id="calculadora_envios" method="post">
+            <label for="distancia">Distancia en km:</label><br />
+            <input
+              class="bg-slate-100 w-full py-2 px-4 rounded mb-5"
+              type="number"
+              placeholder="0"
+              id="distancia"
+              name="distancia"
+              required
+            />
+
+            <label for="fecha">Fecha</label><br />
+            <input
+              type="date"
+              id="fecha"
+              class="bg-slate-100 p-3 mb-5 rounded w-full"
+            />
+
+            <label for="tamaño">¿Es un paquete de gran tamaño?</label><br />
+            <select id="tamaño" name="tamaño" class="mb-5 w-full">
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+
+            <input
+              type="button"
+              id="calcular_envio"
+              value="Calcular"
+              class="bg-blue-500 mt-10 w-full rounded-sm p-3 text-white"
+            />
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-slate-900 flex items-center justify-center text-white h-[60px]"
+    >
+      <p class="text-center">
+        Envios Flex 2024 - Todos los derechos reservados
+      </p>
+    </footer>
+    <script src="./js/costos.js"></script>
+
+  </body>
+</html>
